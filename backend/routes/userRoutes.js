@@ -59,7 +59,7 @@ router.post("/loginn", async (req, res) => {
     // Set token in a secure HTTP-only cookie
     res.cookie("token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production", // Only use secure cookies in production
+      
       maxAge: 24 * 60 * 60 * 1000, // Token expires in 1 day
     });
 
